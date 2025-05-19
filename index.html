@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Whiteboard Docs Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h2>Docs Navigation</h2>
+            <ul>
+                <li><button id="nav-architecture">Architecture Diagrams</button></li>
+                <li><button id="nav-ppt">Presentation Script</button></li>
+                <li><button id="nav-technical">Technical Details</button></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <div id="doc-content" class="doc-content">
+                <!-- Content will be loaded here -->
+                <div class="loading">Loading Architecture Diagrams...</div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

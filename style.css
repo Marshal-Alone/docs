@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f8fa;
+    color: #222;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background: #232946;
+    color: #fff;
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar li {
+    margin-bottom: 1rem;
+}
+
+.sidebar button {
+    width: 100%;
+    background: #393e6a;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+    background: #eebbc3;
+    color: #232946;
+}
+
+.content {
+    flex: 1;
+    padding: 2.5rem 2rem;
+    background: #fff;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.doc-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #f6f8fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    padding: 2rem 2rem 2.5rem 2rem;
+    min-height: 60vh;
+    overflow-x: auto;
+}
+
+.loading {
+    color: #888;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Add styles for markdown content */
+.doc-content h1 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #232946;
+}
+
+.doc-content h2 {
+    font-size: 1.5rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #232946;
+}
+
+.doc-content h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+    color: #232946;
+}
+
+.doc-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.doc-content ul,
+.doc-content ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.doc-content li {
+    margin-bottom: 0.5rem;
+}
+
+.doc-content pre {
+    background: #f1f1f1;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.doc-content code {
+    font-family: 'Courier New', monospace;
+    background: #f1f1f1;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 0.5rem;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .sidebar li {
+        margin-bottom: 0;
+    }
+
+    .content {
+        padding: 1rem 0.5rem;
+    }
+
+    .doc-content {
+        padding: 1rem;
+    }
+}
